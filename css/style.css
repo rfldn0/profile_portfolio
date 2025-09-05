@@ -11,3 +11,9 @@ body
 {
     float: center;
 }
+
+.project 
+{
+    background-color: papayawhip;
+    border-radius: 25px;
+}
