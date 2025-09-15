@@ -4,7 +4,7 @@
     --background: oklch(100.00% 0.000 89.88);
     --primary: oklch(66.00% 0.156 59.09);
     --secondary: oklch(81.41% 0.000 89.88);
-    --accent: oklch(69.275% 0.00008 271.152);
+    --accent: oklch(84.072% 0.00666 16.5);
 }
 
 :root[data-theme="dark"] {
@@ -12,7 +12,7 @@
     --background: oklch(0.00% 0.000 0.00);
     --primary: oklch(78.16% 0.165 64.50);
     --secondary: oklch(36.39% 0.000 89.88);
-    --accent: oklch(50.323% 0.00006 271.152);
+    --accent: oklch(31.815% 0.00141 15.817);
 }
 
 
@@ -37,7 +37,6 @@ body {
     margin: 0 auto;
     padding: 30px;
 }
-
 /* Header with glassmorphism */
 .header {
     background: rgba(255, 255, 255, 0.1);
