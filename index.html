@@ -11,10 +11,25 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Header container -->
     <div class="container">
         <header class="header">
             <nav class="nav">
-                <div class="logo"> <img src="assets/imgs/cipher_logo.png" alt="cipher_logo"> Cipher Studio</div>
+                <div class="logo">
+                <!-- for motion icon -->
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="8" fill="none"/>
+                    <path d="M50 10L85 35" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                    <polygon points="85,40 75,30 95,30" fill="currentColor"/>
+                    <circle class="keyhole-bg" cx="50" cy="50" r="25" fill="currentColor"/>
+                    <circle class="keyhole-circle" cx="50" cy="45" r="8" fill="white"/>
+                    <rect class="keyhole-rect" x="45" y="45" width="10" height="15" fill="white"/>
+                    <polygon class="keyhole-triangle" points="45,60 55,60 52,65" fill="white"/>
+                </svg>
+                <!-- Link to cipher studio's website -->
+                <a href="#"><span class="logo">Cipher studio</span></a>
+            </div>
+
                 <ul class="nav-menu">
                     <li class="nav-item active" data-section="home">
                         <a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a>

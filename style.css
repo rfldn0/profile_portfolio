@@ -57,19 +57,28 @@ body {
 }
 
 .logo {
-    font-family: 'Story Script', cursive;
     font-size: 36px;
     font-weight: bold;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.3s ease;
 }
 
-.logo img {
-    border-radius: 50%;
-    width: 100px;
-    opacity: 50%;
+.logo-svg {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-svg {
+    transform: rotate(360deg);
 }
 
 .nav-menu {
