@@ -8,7 +8,3 @@
 
 ## About page
 <img width="906" height="489" alt="image" src="https://github.com/user-attachments/assets/72b27512-e8cf-46a8-a65e-dc533b2b3337" />
-
-## Rundown video features
-[![Watch the video](assets/imgs/github-header-banner.png)](assets/imgs/rundown.mp4)
-
