@@ -23,12 +23,14 @@
 }
 
 body {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Orbitron', monospace;
     background: linear-gradient(135deg, var(--background) 0%, var(--accent) 100%);
     color: var(--text);
     line-height: 1.6;
     min-height: 100vh;
 }
+
+
 
 .container {
     max-width: 1400px;
@@ -80,6 +82,10 @@ body {
 .logo:hover .logo-svg {
     transform: rotate(360deg);
 }
+.logo span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
 
 .nav-menu {
     display: flex;
@@ -95,6 +101,8 @@ body {
     border-radius: 25px;
     overflow: hidden;
     transition: all 0.3s ease;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
 }
 
 .nav-item.active {
@@ -149,23 +157,25 @@ body {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     margin-bottom: 30px;
     opacity: 0.9;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .hero-description {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     max-width: 600px;
     margin: 0 auto 40px;
     opacity: 0.8;
@@ -193,24 +203,26 @@ body {
     transition: transform 0.3s ease;
 }
 
-.profile-image:hover {
+.profile-top:hover {
     transform: scale(1.05);
 }
 
 .profile-name {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 15px;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .profile-title {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     margin-bottom: 25px;
     opacity: 0.9;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .social-links {
@@ -290,10 +302,11 @@ body {
 }
 
 .skill-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 15px;
     color: var(--primary);
+    font-family: 'Press Start 2P', cursive;
 }
 
 /* Projects Section */
@@ -335,17 +348,18 @@ body {
 }
 
 .project-title {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 15px;
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .project-description {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     line-height: 1.6;
     margin-bottom: 25px;
     opacity: 0.9;
@@ -407,10 +421,12 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'Press Start 2P', cursive;
 }
 
+
 .about-text {
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
