@@ -22,6 +22,12 @@ GIFS credits:
 7. https://giphy.com/gifs/80s-synthwave-aesthetic-k81NasbqkKA5HSyJxN
 
 ```
+## TO DO 
+TASK FOR PORTFOLIO: 
+1. Search Home, Projects, Accomplishments, and contact svgs. 
+2. Find a way to make the z-index item disappear for screen width less 750px. 
+3. Hamburger menu. 
+4. Find out why the first project is not displaying any img placeholder. 
 
 ## Look
 ![alt text](image.png)

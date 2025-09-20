@@ -30,29 +30,59 @@
         <span class="studio-name">Cipher Studio</span>
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <!-- Home -->
-        <a href="#home" class="nav-item">
-            <p class="cursor typewritter-animation" style="display: none;"> Home </p>
+        <!-- Hamburger Menu (Mobile Only) -->
+    <div class="hamburger-menu" onclick="toggleMobileMenu()">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-menu">
+
+        <!-- Reuse same social icons -->
+        <div class="mobile-social-grid">
+            <a href="https://linkedin.com/..." target="_blank" class="mobile-social-item">LinkedIn</a>
+            <a href="https://facebook.com/..." target="_blank" class="mobile-social-item">Facebook</a>
+            <a href="https://instagram.com/..." target="_blank" class="mobile-social-item">Instagram</a>
+            <a href="https://github.com/..." target="_blank" class="mobile-social-item">GitHub</a>
+        </div>
+
+        <!-- Reuse same images for links -->
+        <a href="#home" class="mobile-nav-item" onclick="closeMobileMenu()">
             <img src="assets/imgs/home.png" alt="home">
+            Home
         </a>
-        <!-- Projects -->
-        <a href="#projects" class="nav-item">
-            <p class="cursor typewritter-animation" style="display: none;"> Projects </p>
+        <a href="#projects" class="mobile-nav-item" onclick="closeMobileMenu()">
             <img src="assets/imgs/project-management.png" alt="project">
+            Projects
         </a>
-        <!-- Accomplishments -->
-        <a href="#timeline" class="nav-item">
-            <p class="cursor typewritter-animation" style="display: none;"> Accomplishments </p>
-            <img src="assets/imgs/start-up.png" alt="accomplishments">
+        <a href="#timeline" class="mobile-nav-item" onclick="closeMobileMenu()">
+            <img src="assets/imgs/start-up.png" alt="timeline">
+            Timeline
         </a>
-        <!-- Contact -->        
-        <a href="#contact" class="nav-item">
-            <p class="cursor typewritter-animation" style="display: none;"> Contact </p>
-            <img src="assets/imgs/notebook-of-contacts.png" alt="contacts">
+        <a href="#contact" class="mobile-nav-item" onclick="closeMobileMenu()">
+            <img src="assets/imgs/notebook-of-contacts.png" alt="contact">
+            Contact
         </a>
-    </nav>
+    </div>
+
+    <!-- Desktop Navigation -->
+<nav class="nav">
+    <a href="#home" class="nav-item">
+        <img src="assets/imgs/home.png" alt="home">
+    </a>
+    <a href="#projects" class="nav-item">
+        <img src="assets/imgs/project-management.png" alt="project">
+    </a>
+    <a href="#timeline" class="nav-item">
+        <img src="assets/imgs/start-up.png" alt="timeline">
+    </a>
+    <a href="#contact" class="nav-item">
+        <img src="assets/imgs/notebook-of-contacts.png" alt="contact">
+    </a>
+</nav>
 
     <!-- Social Media Bar -->
     <div class="social-bar">
