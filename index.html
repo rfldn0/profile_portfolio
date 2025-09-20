@@ -1,248 +1,204 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark light" />
-    <title>Hi, Welcome...</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Victor R Tabuni - Software Engineer & Game Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
+  
 </head>
-<body>
-    <!-- Header container -->
-    <div class="container">
-        <header class="header">
-            <nav class="nav">
-                <div class="logo">
-
-
-                <!-- for motion icon -->
-                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" onclick="toggleTheme()">
-                    <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="8" fill="none"/>
-                    <path d="M50 10L85 35" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
-                    <polygon points="85,40 75,30 95,30" fill="currentColor"/>
-                    <circle class="keyhole-bg" cx="50" cy="50" r="25" fill="currentColor"/>
-                    <circle class="keyhole-circle" cx="50" cy="45" r="8" fill="var(--background)"/>
-                    <rect class="keyhole-rect" x="45" y="45" width="10" height="15" fill="var(--background)"/>
-                    <polygon class="keyhole-triangle" points="45,60 55,60 52,65" fill="var(--background)"/>
-                </svg>
-                <!-- Link to cipher studio's website -->
-                <a href="#"><span class="logo">Cipher studio</span></a>
+<body data-theme="dark">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">@rfldno</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <svg class="hero-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="8" fill="none"/>
+                        <path d="M50 10L85 35" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                        <polygon points="85,40 75,30 95,30" fill="currentColor"/>
+                        <circle class="keyhole-bg" cx="50" cy="50" r="25" fill="currentColor"/>
+                        <circle class="keyhole-circle" cx="50" cy="45" r="8" fill="white"/>
+                        <rect class="keyhole-rect" x="45" y="45" width="10" height="15" fill="white"/>
+                        <polygon class="keyhole-triangle" points="45,60 55,60 52,65" fill="white"/>
+                    </svg>
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
+        </div>
+    </nav>
 
-                <ul class="nav-menu">
-                    <li class="nav-item active" data-section="home">
-                        <a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a>
-                    </li>
-                    <li class="nav-item" data-section="projects">
-                        <a href="#" class="nav-link"><i class="fas fa-briefcase"></i> Projects</a>
-                    </li>
-                    <li class="nav-item" data-section="about">
-                        <a href="#" class="nav-link"><i class="fas fa-user"></i> About</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <!-- Home Section -->
-            <section id="home" class="section active">
-                <div class="hero-section">
-                    <h1 class="hero-title">Hello, I'm Victor</h1>
-                    <p class="hero-subtitle">Game developer & GUI enthusiast</p>
-                    <p class="hero-description">
-                        Passionate about creating immersive digital experiences through cutting-edge design, 
-                        AI integration, and innovative storytelling techniques.
-                    </p>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="profile-card">
-                            <div class="profile-top">
-                            <img src="assets/imgs/upscaled_profile pict.jpg" alt="Victor's Profile Picture" class="profile-image">
-                            <h2 class="profile-name">@rfldno_</h2>
-                            </div>
-                            <p class="profile-title">Creative Technologist</p>
-                            <p>Exploring the intersection of art, technology, and human experience.</p>
-                            
-                            <div class="social-links">
-                                <a href="https://www.instagram.com/rfldno_/" class="social-link" target="_blank">
-                                    <img src="assets/imgs/Instagram.png" alt="Dribbble" class="social-icon">
-                                    <span>Instagram</span>
-                                </a>
-                                <a href="https://github.com/rfldn0" class="social-link" target="_blank">
-                                    <img src="assets/imgs/Github.png" alt="Github" class="social-icon">
-                                    <span>Github</span>
-                                </a>
-                                <a href="https://www.linkedin.com/in/victor-rifaldino-tabuni-14856628b/" class="social-link" target="_blank">
-                                    <img src="assets/imgs/linkedIn.png" alt="LinkedIn" class="social-icon">
-                                    <span>LinkedIn</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Certification -->
-                    <div class="col-lg-8">
-                        <div class="skills-grid">
-                            <div class="skill-card">
-                                <img src="assets/imgs/skill01_placeholder.gif" alt="Handsfree Voice Technology" class="skill-icon">
-                                <h3 class="skill-title">Handsfree Voice</h3>
-                                <p>Developing intuitive voice-controlled interfaces that revolutionize user interaction with digital environments.</p>
-                            </div>
-                            
-                            <div class="skill-card">
-                                <img src="assets/imgs/skill02_placeholder.gif" alt="Recognition Technology" class="skill-icon">
-                                <h3 class="skill-title">Recognition Technology</h3>
-                                <p>Advanced pattern recognition and computer vision systems for enhanced user experience and accessibility.</p>
-                            </div>
-                            
-                            <div class="skill-card">
-                                <img src="assets/imgs/skill03_placeholder.gif" alt="AI Storyscape" class="skill-icon">
-                                <h3 class="skill-title">AI Storyscape</h3>
-                                <p>Creating immersive narrative experiences powered by artificial intelligence and interactive storytelling.</p>
-                            </div>
-                            
-                            <div class="skill-card">
-                                <img src="assets/imgs/skill04_placeholder.gif" alt="3D Vision & Prototyping" class="skill-icon">
-                                <h3 class="skill-title">3D Vision & Prototyping</h3>
-                                <p>Bringing ideas to life through advanced 3D modeling, visualization, and rapid prototyping techniques.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="section">
-                <div class="hero-section">
-                    <h1 class="hero-title">My Projects</h1>
-                    <p class="hero-subtitle">A collection of innovative digital experiences</p>
-                </div>
-
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="assets/imgs/project01_placeholder.gif" alt="Immersive Voice Interface Project" class="project-image">
-                        <div class="project-content">
-                            <h3 class="project-title">Immersive Voice Interface</h3>
-                            <p class="project-description">
-                                A revolutionary voice-controlled interface that combines spatial audio, gesture recognition, 
-                                and AI to create truly hands-free digital interactions.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">Voice UI</span>
-                                <span class="project-tag">AI</span>
-                                <span class="project-tag">Spatial Audio</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">View Project</a>
-                                <a href="#" class="project-link">Live Demo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="assets/imgs/project02_placeholder.gif" alt="AI-Powered Story Generator" class="project-image">
-                        <div class="project-content">
-                            <h3 class="project-title">AI Storyscape Platform</h3>
-                            <p class="project-description">
-                                An interactive storytelling platform that uses machine learning to generate personalized 
-                                narratives based on user preferences and emotional responses.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">AI/ML</span>
-                                <span class="project-tag">Storytelling</span>
-                                <span class="project-tag">UX Design</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">View Project</a>
-                                <a href="#" class="project-link">Try Demo</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="assets/imgs/project03_placeholder.gif" alt="3D Prototype Visualization Tool" class="project-image">
-                        <div class="project-content">
-                            <h3 class="project-title">3D Vision Prototyper</h3>
-                            <p class="project-description">
-                                A comprehensive 3D visualization tool that allows designers to rapidly prototype, 
-                                iterate, and share immersive product concepts in virtual environments.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">3D Modeling</span>
-                                <span class="project-tag">WebGL</span>
-                                <span class="project-tag">VR/AR</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">Explore</a>
-                                <a href="#" class="project-link">Download</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="assets/imgs/project04_placeholder.gif" alt="Recognition Technology Dashboard" class="project-image">
-                        <div class="project-content">
-                            <h3 class="project-title">Smart Recognition Suite</h3>
-                            <p class="project-description">
-                                An intelligent recognition system combining facial, gesture, and voice recognition 
-                                to create adaptive and personalized user experiences across devices.
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">Computer Vision</span>
-                                <span class="project-tag">Machine Learning</span>
-                                <span class="project-tag">IoT</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">Learn More</a>
-                                <a href="#" class="project-link">Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="section">
-                <div class="about-content">
-                    <h1 class="about-title">About Me</h1>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="assets/imgs/upscaled_profile pict.jpg" alt="Victor working in studio" class="profile-image mb-4">
-                        </div>
-                        <div class="col-lg-8">
-                            <p class="about-text">
-                                I'm Victor, a creative technologist passionate about pushing the boundaries of digital innovation. 
-                                My journey began with a fascination for how technology can enhance human creativity and connection. 
-                                
-                                <br><br>
-                                
-                                Through my work in voice interfaces, AI-powered storytelling, 3D visualization, and recognition technologies, 
-                                I strive to create experiences that are not just functional, but truly transformative. I believe that the 
-                                future of design lies in the seamless integration of human intuition and artificial intelligence.
-                                
-                                <br><br>
-                                
-                                When I'm not coding or designing, you can find me exploring new creative mediums, experimenting with 
-                                emerging technologies, or collaborating with fellow innovators who share the vision of a more connected 
-                                and creative digital future.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <!-- Social Media Card -->
+    <div class="social-card">
+        <div class="social-links">
+            <a href="#" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
     </div>
 
-    <button class="theme-toggle" onclick="toggleTheme()">
-        <i class="fas fa-moon"></i>
-    </button>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Software Engineer & Game Developer</h1>
+            <p>Passionate about creating innovative solutions and immersive gaming experiences</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="about-text">
+                    <p>I'm a Computer Information Systems professional with a deep passion for game development and software engineering. My journey combines technical expertise with creative problem-solving to build engaging digital experiences.</p>
+                    
+                    <p>With a strong foundation in programming languages, database management, and system architecture, I'm actively seeking opportunities as a Software Engineer where I can contribute to innovative projects and continue growing my skills in the tech industry.</p>
+                    
+                    <p>My interests span from creating immersive gaming worlds to developing efficient business solutions, always with a focus on user experience and technical excellence.</p>
+                </div>
+            </div>
+
+            <!-- Slideshow -->
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <h3>Technical Skills</h3>
+                    <p>Proficient in Java, Python, C#, JavaScript, SQL, and various frameworks. Experienced with game engines like Unity and Unreal Engine.</p>
+                </div>
+                <div class="slide">
+                    <h3>Game Development</h3>
+                    <p>Creating engaging gameplay mechanics, implementing AI systems, and designing user interfaces for immersive gaming experiences.</p>
+                </div>
+                <div class="slide">
+                    <h3>Software Engineering</h3>
+                    <p>Full-stack development, database design, API integration, and agile development methodologies for scalable applications.</p>
+                </div>
+                <div class="slide">
+                    <h3>Problem Solving</h3>
+                    <p>Analytical thinking, debugging complex systems, optimizing performance, and finding creative solutions to technical challenges.</p>
+                </div>
+                <div class="slide-nav">
+                    <button class="slide-btn active" onclick="showSlide(0)">Skills</button>
+                    <button class="slide-btn" onclick="showSlide(1)">Games</button>
+                    <button class="slide-btn" onclick="showSlide(2)">Software</button>
+                    <button class="slide-btn" onclick="showSlide(3)">Problem Solving</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Adventure Quest RPG</h3>
+                        <p class="project-description">A 2D RPG game featuring turn-based combat, character progression, and an engaging storyline. Built with Unity and C#.</p>
+                        <a href="#" class="demo-btn">View Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management System</h3>
+                        <p class="project-description">A full-stack web application for project management with real-time collaboration features. Built with React and Node.js.</p>
+                        <a href="#" class="demo-btn">View Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Fitness Tracker App</h3>
+                        <p class="project-description">A mobile application for tracking workouts and nutrition with data visualization and progress monitoring.</p>
+                        <a href="#" class="demo-btn">View Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Inventory Management System</h3>
+                        <p class="project-description">A comprehensive database solution for managing business inventory with reporting and analytics features.</p>
+                        <a href="#" class="demo-btn">View Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Puzzle Game</h3>
+                        <p class="project-description">An innovative puzzle game featuring AI-driven adaptive difficulty and procedural level generation.</p>
+                        <a href="#" class="demo-btn">View Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Analytics Dashboard</h3>
+                        <p class="project-description">Interactive dashboard for business intelligence with real-time data processing and visualization capabilities.</p>
+                        <a href="#" class="demo-btn">View Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                    I'm always interested in new opportunities and exciting projects. Let's connect and discuss how we can work together!
+                </p>
+                <a href="mailto:your.email@example.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Send Email
+                </a>
+            </div>
+        </div>
+    </section>
+        
 </body>
 </html>
