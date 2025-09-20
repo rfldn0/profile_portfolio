@@ -3,202 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor R Tabuni - Software Engineer & Game Developer</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta name="color-scheme" content="light dark">
+    <title>Victor - Game Developer & GUI Enthusiast</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="animate.css">
+    <script src="script.js" defer></script>
   
 </head>
-<body data-theme="dark">
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">@rfldno</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <button class="theme-toggle" onclick="toggleTheme()">
-                    <svg class="hero-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="8" fill="none"/>
-                        <path d="M50 10L85 35" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
-                        <polygon points="85,40 75,30 95,30" fill="currentColor"/>
-                        <circle class="keyhole-bg" cx="50" cy="50" r="25" fill="currentColor"/>
-                        <circle class="keyhole-circle" cx="50" cy="45" r="8" fill="white"/>
-                        <rect class="keyhole-rect" x="45" y="45" width="10" height="15" fill="white"/>
-                        <polygon class="keyhole-triangle" points="45,60 55,60 52,65" fill="white"/>
-                    </svg>
-                </button>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
+<body>
+    <!-- Floating particles -->
+    <div class="particles"></div>
 
-    <!-- Social Media Card -->
-    <div class="social-card">
-        <div class="social-links">
-            <a href="#" class="social-link" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="social-link" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-link" title="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-link" title="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
+    <!-- Theme Toggle - Clean Design -->
+    <div class="theme-toggle">
+        <div class="logo-container" onclick="toggleTheme()">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="8" fill="none"/>
+                <path d="M50 10L85 35" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                <polygon points="85,40 75,30 95,30" fill="currentColor"/>
+                <circle class="keyhole-bg" cx="50" cy="50" r="25" fill="currentColor"/>
+                <circle class="keyhole-circle" cx="50" cy="45" r="8" fill="var(--background)"/>
+                <rect class="keyhole-rect" x="45" y="45" width="10" height="15" fill="var(--background)"/>
+                <polygon class="keyhole-triangle" points="45,60 55,60 52,65" fill="var(--background)"/>
+            </svg>
         </div>
+        <span class="studio-name">Cipher Studio</span>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Software Engineer & Game Developer</h1>
-            <p>Passionate about creating innovative solutions and immersive gaming experiences</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-    </section>
+    <!-- Navigation -->
+    <nav class="nav">
+        <!-- Home -->
+        <a href="#home" class="nav-item">
+            <p class="cursor typewritter-animation" style="display: none;"> Home </p>
+            <img src="assets/imgs/home.png" alt="home">
+        </a>
+        <!-- Projects -->
+        <a href="#projects" class="nav-item">
+            <p class="cursor typewritter-animation" style="display: none;"> Projects </p>
+            <img src="assets/imgs/project-management.png" alt="project">
+        </a>
+        <!-- Accomplishments -->
+        <a href="#timeline" class="nav-item">
+            <p class="cursor typewritter-animation" style="display: none;"> Accomplishments </p>
+            <img src="assets/imgs/start-up.png" alt="accomplishments">
+        </a>
+        <!-- Contact -->        
+        <a href="#contact" class="nav-item">
+            <p class="cursor typewritter-animation" style="display: none;"> Contact </p>
+            <img src="assets/imgs/notebook-of-contacts.png" alt="contacts">
+        </a>
+    </nav>
 
-    <!-- About Section -->
-    <section id="about" class="section">
+    <!-- Social Media Bar -->
+    <div class="social-bar">
+        <a href="https://linkedin.com/in/victor-rifaldino-tabuni-14856628b/" target="_blank" class="social-item linkedin" title="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+        </a>
+        <a href="https://www.facebook.com/people/Tabuni-Victor/100083164704958/#" target="_blank" class="social-item facebook" title="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+        </a>
+        <a href="https://instagram.com/rfldno_" target="_blank" class="social-item instagram" title="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.40z"/>
+            </svg>
+        </a>
+        <a href="https://github.com/rfldn0" target="_blank" class="social-item github" title="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </a>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <p class="cursor typewritter-animation" style="display: none;"> Hi, there...</p>
+                <div class="profile-picture"><img id="profile-img" src="assets/imgs/upscaled_profile pict.jpg" alt="rfldn0"></div>
+                <h1>Hello, I'm Victor</h1>
+                <div class="subtitle">Game developer & GUI enthusiast</div>
+                <div class="description">
+                    Passionate about game particularly intersted in games' lores and user experiences. Founded Cipher Studio. 
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects">
+                <div class="project-card">
+                    <div class="project-image recognition"> <img src="/assets/imgs/project01_placeholder.gif" alt="project1"></div>
+                    <div class="project-header">
+                        <h3>
+                            Gamer Social site (Gameset)
+                            <span class="expand-icon"></span>
+                        </h3>
+                        <a href="https://github.com/rfldn0/gamesetwebapp" class="github-btn" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            Repository
+                        </a>
+                    </div>
+                    <p>An opend discussion site, where gamers can comment on games unonimously.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image storyscape">
+                        <img src="assets/imgs/project-pacman.gif" alt="PacMan">
+                    </div>
+                    <div class="project-header">
+                        <h3>
+                            PacMan
+                            <span class="expand-icon"></span>
+                        </h3>
+                        <a href="https://github.com/rfldn0/PacMan" class="github-btn" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            Repository
+                        </a>
+                    </div>
+                    <p>This is a youtube-based PacMan game creation, just a simple remake of pacman game using Java JFrame.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <i class="fas fa-user"></i>
+            <h2>Journey & Accomplishments</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="assets/imgs/cipher_animation.gif" alt="">
+                        <h3>Started Cipher Studio</h3>
+                        <div class="timeline-date">2025</div>
+                        <p>Starting an indie game studio.</p>
+                        <a href="Cipher studio site" class="github-btn" target="_blank">
+                            [Click Here]
+                        </a>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <p>I'm a Computer Information Systems professional with a deep passion for game development and software engineering. My journey combines technical expertise with creative problem-solving to build engaging digital experiences.</p>
-                    
-                    <p>With a strong foundation in programming languages, database management, and system architecture, I'm actively seeking opportunities as a Software Engineer where I can contribute to innovative projects and continue growing my skills in the tech industry.</p>
-                    
-                    <p>My interests span from creating immersive gaming worlds to developing efficient business solutions, always with a focus on user experience and technical excellence.</p>
-                </div>
-            </div>
-
-            <!-- Slideshow -->
-            <div class="slideshow-container">
-                <div class="slide active">
-                    <h3>Technical Skills</h3>
-                    <p>Proficient in Java, Python, C#, JavaScript, SQL, and various frameworks. Experienced with game engines like Unity and Unreal Engine.</p>
-                </div>
-                <div class="slide">
-                    <h3>Game Development</h3>
-                    <p>Creating engaging gameplay mechanics, implementing AI systems, and designing user interfaces for immersive gaming experiences.</p>
-                </div>
-                <div class="slide">
-                    <h3>Software Engineering</h3>
-                    <p>Full-stack development, database design, API integration, and agile development methodologies for scalable applications.</p>
-                </div>
-                <div class="slide">
-                    <h3>Problem Solving</h3>
-                    <p>Analytical thinking, debugging complex systems, optimizing performance, and finding creative solutions to technical challenges.</p>
-                </div>
-                <div class="slide-nav">
-                    <button class="slide-btn active" onclick="showSlide(0)">Skills</button>
-                    <button class="slide-btn" onclick="showSlide(1)">Games</button>
-                    <button class="slide-btn" onclick="showSlide(2)">Software</button>
-                    <button class="slide-btn" onclick="showSlide(3)">Problem Solving</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Adventure Quest RPG</h3>
-                        <p class="project-description">A 2D RPG game featuring turn-based combat, character progression, and an engaging storyline. Built with Unity and C#.</p>
-                        <a href="#" class="demo-btn">View Demo</a>
-                    </div>
-                </div>
+    <div class="container">
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2>Let's Create Something Amazing</h2>
+            <p>Ready to bring your ideas to life? Let's collaborate and build the future of digital experiences.</p>
+            <a href="mailto:victor@example.com" class="contact-email">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                tabunivictorr@gmail.com
+            </a>
+        </section>
+    </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Task Management System</h3>
-                        <p class="project-description">A full-stack web application for project management with real-time collaboration features. Built with React and Node.js.</p>
-                        <a href="#" class="demo-btn">View Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Fitness Tracker App</h3>
-                        <p class="project-description">A mobile application for tracking workouts and nutrition with data visualization and progress monitoring.</p>
-                        <a href="#" class="demo-btn">View Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Inventory Management System</h3>
-                        <p class="project-description">A comprehensive database solution for managing business inventory with reporting and analytics features.</p>
-                        <a href="#" class="demo-btn">View Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Puzzle Game</h3>
-                        <p class="project-description">An innovative puzzle game featuring AI-driven adaptive difficulty and procedural level generation.</p>
-                        <a href="#" class="demo-btn">View Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Analytics Dashboard</h3>
-                        <p class="project-description">Interactive dashboard for business intelligence with real-time data processing and visualization capabilities.</p>
-                        <a href="#" class="demo-btn">View Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
-                    I'm always interested in new opportunities and exciting projects. Let's connect and discuss how we can work together!
-                </p>
-                <a href="mailto:your.email@example.com" class="cta-button">
-                    <i class="fas fa-envelope"></i> Send Email
-                </a>
-            </div>
-        </div>
-    </section>
-        
 </body>
 </html>
