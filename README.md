@@ -1,9 +1,18 @@
 
-```Stack
-Tech stack: html, css, javascript, VSCode, Canva
+# 🛠️ Tech Stack
 
-source: 
-gifs: 
+<div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+<img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="VS Code">
+
+</div>
+
+
+```
+GIFS credits:  
 1. https://giphy.com/gifs/splat-nicksplat-rocket-power-3o6nUMU2VDwHbPoyQg
 2. https://giphy.com/gifs/RawFury-3s6inaVnOnO6L3vbwR
 3. https://giphy.com/gifs/pixel-pixels-art-gif-CjgNRG8CufDwA83jB6
