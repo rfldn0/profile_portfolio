@@ -1,8 +1,7 @@
 # Victor Tabuni - Portfolio Website
 
 A modern, interactive portfolio website featuring game-inspired design elements and smooth animations. Built to showcase development projects and professional journey through an engaging user experience.
-
-![Portfolio Preview](image.png)
+<img width="1910" height="912" alt="image" src="https://github.com/user-attachments/assets/63c3dc3a-55f2-4960-8525-793aae8ee9b4" />
 
 ## Features
 
