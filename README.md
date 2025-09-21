@@ -28,7 +28,9 @@ TASK FOR PORTFOLIO:
 2. Find a way to make the z-index item disappear for screen width less 750px. 
 3. Hamburger menu. 
 4. Find out why the first project is not displaying any img placeholder. 
-5. ~~Update navbar using svg~~. 
+5. Update navbar using svg.
+6. navigation icon should become text when in hamburger menu. 
+ 
 
 ## Look
 ![alt text](image.png)

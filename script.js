@@ -1,8 +1,29 @@
 
+// Mobile menu functionality
+function toggleMobileMenu() {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const overlay = document.querySelector('.mobile-overlay');
+    
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+function closeMobileMenu() {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const overlay = document.querySelector('.mobile-overlay');
+    
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
 // Theme toggle functionality
 function toggleTheme() {
     const body = document.body;
-    const logoSvg = document.querySelector('.logo-svg');
+    const logoSvg = document.querySelector('.new-logo-svg');
     const currentTheme = body.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     
@@ -38,7 +59,7 @@ function createParticles() {
 }
 
 // Smooth scrolling for navigation
-document.querySelectorAll('.nav-item').forEach(item => {
+document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
         const target = document.querySelector(item.getAttribute('href'));
@@ -97,23 +118,3 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.timeline-item').forEach(item => {
     observer.observe(item);
 });
-
-function toggleMobileMenu() {
-    const hamburger = document.querySelector('.hamburger-menu');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const overlay = document.querySelector('.mobile-overlay');
-    
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    overlay.classList.toggle('active');
-}
-
-function closeMobileMenu() {
-    const hamburger = document.querySelector('.hamburger-menu');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const overlay = document.querySelector('.mobile-overlay');
-    
-    hamburger.classList.remove('active');
-    mobileMenu.classList.remove('active');
-    overlay.classList.remove('active');
-}

@@ -3,111 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
     <title>Victor - Game Developer & GUI Enthusiast</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animate.css">
     <script src="script.js" defer></script>
-  
 </head>
 <body>
     <!-- Floating particles -->
     <div class="particles"></div>
 
-    <!-- Theme Toggle - Clean Design -->
+    <!-- Theme Toggle with New Logo -->
     <div class="theme-toggle">
         <div class="logo-container" onclick="toggleTheme()">
-            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="8" fill="none"/>
-                <path d="M50 10L85 35" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
-                <polygon points="85,40 75,30 95,30" fill="currentColor"/>
-                <circle class="keyhole-bg" cx="50" cy="50" r="25" fill="currentColor"/>
-                <circle class="keyhole-circle" cx="50" cy="45" r="8" fill="var(--background)"/>
-                <rect class="keyhole-rect" x="45" y="45" width="10" height="15" fill="var(--background)"/>
-                <polygon class="keyhole-triangle" points="45,60 55,60 52,65" fill="var(--background)"/>
+            <svg class="new-logo-svg" viewBox="0 0 300.000000 300.000000" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)">
+                    <path d="M1400 2029 c-231 -60 -414 -247 -474 -485 -20 -79 -20 -249 0 -334 56 -239 246 -433 486 -495 90 -24 269 -17 358 14 199 69 358 235 422 441 30 99 32 300 4 400 -16 60 -54 145 -86 196 -12 19 -8 35 34 139 26 65 45 119 42 122 -2 2 -33 -7 -68 -20 -34 -14 -88 -34 -120 -46 l-56 -20 -69 35 c-144 73 -321 93 -473 53z m341 -129 c34 -12 86 -37 116 -56 l55 -35 -54 -61 c-73 -83 -79 -86 -114 -61 -106 76 -282 65 -387 -23 -149 -125 -168 -372 -42 -538 52 -69 171 -126 259 -126 59 0 142 25 195 58 56 35 56 32 -4 218 -25 76 -45 147 -45 158 0 10 19 40 43 65 80 88 182 204 196 223 12 18 14 18 31 3 38 -35 89 -158 106 -259 14 -84 15 -110 4 -175 -35 -221 -186 -396 -392 -455 -70 -20 -217 -21 -281 -1 -129 39 -251 133 -317 244 -63 106 -80 168 -80 290 0 175 41 272 165 396 86 86 159 129 255 152 74 17 213 9 291 -17z m-103 -406 c28 -31 28 -69 1 -113 l-20 -34 20 -77 c12 -42 21 -82 21 -88 0 -8 -28 -12 -91 -12 -81 0 -90 2 -85 18 3 9 12 49 21 88 16 69 15 73 -4 105 -25 41 -27 77 -5 107 34 48 102 51 142 6z"/>
+                </g>
             </svg>
         </div>
         <span class="studio-name">Cipher Studio</span>
     </div>
 
-        <!-- Hamburger Menu (Mobile Only) -->
+    <!-- Navigation with SVG Icons -->
+    <nav class="nav">
+        <a href="#home" class="nav-item" title="Home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+            </svg>
+        </a>
+        <a href="#projects" class="nav-item" title="Projects">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+                <path d="M12 12l0 .01" />
+                <path d="M3 13a20 20 0 0 0 18 0" />
+            </svg>
+        </a>
+        <a href="#timeline" class="nav-item" title="Accomplishments">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 21l8 0" />
+                <path d="M12 17l0 4" />
+                <path d="M7 4l10 0" />
+                <path d="M17 4v8a5 5 0 0 1 -10 0v-8" />
+                <path d="M5 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M19 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+            </svg>
+        </a>
+        <a href="#contact" class="nav-item" title="Contact">
+            <svg viewBox="0 0 16 16" fill="currentColor">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+            </svg>
+        </a>
+    </nav>
+
+    <!-- Mobile Hamburger Menu -->
     <div class="hamburger-menu" onclick="toggleMobileMenu()">
         <div class="hamburger-line"></div>
         <div class="hamburger-line"></div>
         <div class="hamburger-line"></div>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu Overlay -->
     <div class="mobile-overlay" onclick="closeMobileMenu()"></div>
-    <div class="mobile-menu">
 
-        <!-- Reuse same social icons -->
-        <div class="mobile-social-grid">
-            <a href="https://linkedin.com/..." target="_blank" class="mobile-social-item">LinkedIn</a>
-            <a href="https://facebook.com/..." target="_blank" class="mobile-social-item">Facebook</a>
-            <a href="https://instagram.com/..." target="_blank" class="mobile-social-item">Instagram</a>
-            <a href="https://github.com/..." target="_blank" class="mobile-social-item">GitHub</a>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-social-section">
+            <div class="mobile-social-title">Connect</div>
+            <div class="mobile-social-grid">
+                <a href="https://linkedin.com/in/victor-rifaldino-tabuni-14856628b/" target="_blank" class="mobile-social-item linkedin">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://facebook.com/people/Tabuni-Victor/100083164704958/#" target="_blank" class="mobile-social-item facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    Facebook
+                </a>
+                <a href="https://instagram.com/rfldno_" target="_blank" class="mobile-social-item instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.40s-.644-1.44-1.439-1.40z"/>
+                    </svg>
+                    Instagram
+                </a>
+                <a href="https://github.com/rfldn0" target="_blank" class="mobile-social-item github">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
         </div>
 
-        <!-- Reuse same images for links -->
-        <a href="#home" class="mobile-nav-item" onclick="closeMobileMenu()">
-            <img src="assets/imgs/home.png" alt="home">
-            Home
-        </a>
-        <a href="#projects" class="mobile-nav-item" onclick="closeMobileMenu()">
-            <img src="assets/imgs/project-management.png" alt="project">
-            Projects
-        </a>
-        <a href="#timeline" class="mobile-nav-item" onclick="closeMobileMenu()">
-            <img src="assets/imgs/start-up.png" alt="timeline">
-            Timeline
-        </a>
-        <a href="#contact" class="mobile-nav-item" onclick="closeMobileMenu()">
-            <img src="assets/imgs/notebook-of-contacts.png" alt="contact">
-            Contact
-        </a>
+        <div class="mobile-nav-section">
+            <div class="mobile-nav-title">Navigation</div>
+            <a href="#home" class="mobile-nav-item" onclick="closeMobileMenu()">
+                Home
+            </a>
+            <a href="#projects" class="mobile-nav-item" onclick="closeMobileMenu()">
+                Projects
+            </a>
+            <a href="#timeline" class="mobile-nav-item" onclick="closeMobileMenu()">
+                Accomplishments
+            </a>
+            <a href="#contact" class="mobile-nav-item" onclick="closeMobileMenu()">
+                Contact
+            </a>
+        </div>
     </div>
 
-    <!-- Desktop Navigation -->
-<nav class="nav">
-    <a href="#home" class="nav-item">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-    </a>
-    <a href="#projects" class="nav-item">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 6h-2l-2-2H8L6 6H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
-            <circle cx="12" cy="13" r="2"/>
-        </svg>
-    </a>
-    <a href="#timeline" class="nav-item">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M23 8c0 1.1-.9 2-2 2-.18 0-.35-.02-.51-.07l-3.56 3.55c.05.16.07.33.07.52 0 1.1-.9 2-2 2s-2-.9-2-2c0-.18.02-.36.07-.52l-2.55-2.55c-.16.05-.34.07-.52.07s-.36-.02-.52-.07l-4.55 4.56c.05.16.07.33.07.51 0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.18 0 .35.02.51.07l4.56-4.55C8.02 9.36 8 9.18 8 9c0-1.1.9-2 2-2s2 .9 2 2c0 .18-.02.36-.07.52l2.55 2.55c.16-.05.34-.07.52-.07s.36.02.52.07l3.56-3.55C19.02 8.35 19 8.18 19 8c0-1.1.9-2 2-2s2 .9 2 2z"/>
-        </svg>
-    </a>
-    <a href="#contact" class="nav-item">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-    </a>
-</nav>
-
-    <!-- Social Media Bar -->
+    <!-- Social Media Bar (Hidden below 750px) -->
     <div class="social-bar">
         <a href="https://linkedin.com/in/victor-rifaldino-tabuni-14856628b/" target="_blank" class="social-item linkedin" title="LinkedIn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
         </a>
-        <a href="https://www.facebook.com/people/Tabuni-Victor/100083164704958/#" target="_blank" class="social-item facebook" title="Facebook">
+        <a href="https://facebook.com/people/Tabuni-Victor/100083164704958/#" target="_blank" class="social-item facebook" title="Facebook">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
         </a>
         <a href="https://instagram.com/rfldno_" target="_blank" class="social-item instagram" title="Instagram">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.40z"/>
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.40s-.644-1.44-1.439-1.40z"/>
             </svg>
         </a>
         <a href="https://github.com/rfldn0" target="_blank" class="social-item github" title="GitHub">
@@ -121,50 +145,49 @@
         <!-- Hero Section -->
         <section class="hero-section" id="home">
             <div class="hero-content">
-                <p class="cursor typewritter-animation" style="display: none;"> Hi, there...</p>
-                <div class="profile-picture"><img id="profile-img" src="assets/imgs/upscaled_profile pict.jpg" alt="rfldn0"></div>
+                <div class="profile-picture"><img src="assets/imgs/upscaled_profile pict.jpg" alt="profile-picture"></div>
                 <h1>Hello, I'm Victor</h1>
                 <div class="subtitle">Game developer & GUI enthusiast</div>
                 <div class="description">
-                    Passionate about game particularly intersted in games' lores and user experiences. Founded Cipher Studio. 
+                    Passionate about creating immersive digital experiences through 
+                    cutting-edge design, AI integration, and innovative storytelling 
+                    techniques.
                 </div>
             </div>
 
             <div class="projects-grid" id="projects">
                 <div class="project-card">
-                    <div class="project-image recognition"> <img src="/assets/imgs/skill04_placeholder.gif" alt="project1"></div>
+                    <div class="project-image recognition"><img src="assets/imgs/project01_placeholder.gif" alt=""></div>
                     <div class="project-header">
                         <h3>
-                            Gamer Social site (Gameset)
-                            <span class="expand-icon"></span>
+                            Gamer's Discussion Hub (Gameset)
+                            <span class="expand-icon">⚡</span>
                         </h3>
-                        <a href="https://github.com/rfldn0/gamesetwebapp" class="github-btn" target="_blank">
+                        <a href="https://github.com/victor/recognition-tech" class="github-btn" target="_blank">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                             Repository
                         </a>
                     </div>
-                    <p>An opend discussion site, where gamers can comment on games unonimously.</p>
+                    <p>Gameset is a game discovery platform I built to make exploring new titles simple and engaging. The site features endless scrolling with sections for most played, trending, and new games. I designed it with a clean navigation system (Home, Genre, About, Contact, and Search) so users can jump right into browsing without needing an account. Game data is pulled from an external API, ensuring that recommendations stay fresh and up to date.</p>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image storyscape">
-                        <img src="assets/imgs/project-pacman.gif" alt="PacMan">
-                    </div>
+                    <div class="project-image storyscape"> <img src="assets/imgs/project-pacman.gif" alt=""></div>
                     <div class="project-header">
                         <h3>
-                            PacMan
-                            <span class="expand-icon"></span>
+                            Pacman
+                            <span class="expand-icon">🚀</span>
                         </h3>
-                        <a href="https://github.com/rfldn0/PacMan" class="github-btn" target="_blank">
+                        <a href="https://github.com/rfldn0/Pacman" class="github-btn" target="_blank">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                             Repository
                         </a>
                     </div>
-                    <p>This is a youtube-based PacMan game creation, just a simple remake of pacman game using Java JFrame.</p>
+                    <p>PacMan is a simple clone of the classic arcade game, built in Java as a way to deepen my understanding of game loops, object‐oriented programming, and basic AI. Starting from a YouTube tutorial, I implemented core features like Pac-Man’s movement, ghost chase behavior, and one playable level. Future plans include adding selectable dots, power-ups, score tracking, multiple levels, sound effects, and smarter ghost strategies.</p>
                 </div>
             </div>
         </section>
@@ -177,16 +200,16 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <img src="assets/imgs/cipher_animation.gif" alt="">
-                        <h3>Started Cipher Studio</h3>
-                        <div class="timeline-date">2025</div>
-                        <p>Starting an indie game studio.</p>
-                        <a href="Cipher studio site" class="github-btn" target="_blank">
-                            [Click Here]
-                        </a>
+                        <h3>Cipher Studio </h3>
+                        <img src="assets/imgs/cipher_animation.gif" alt="Cipher">
+                        <div class="timeline-date">August 2025</div>
+                        <p>Cipher Studio is an indie game studio I founded to design wellness-focused adventures. Our current project, Haul, is an open-world mystery game in Unity, emphasizing exploration, narrative puzzles, and relaxing gameplay for a 2027 release.</p>
+                        <div class="link-btn">
+                        <a href="https://rfldn0.github.io/Cipher_Studio/"  target="_blank ">[Click Here]</a>
+                        </div>
                     </div>
                 </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -197,13 +220,12 @@
             <h2>Let's Create Something Amazing</h2>
             <p>Ready to bring your ideas to life? Let's collaborate and build the future of digital experiences.</p>
             <a href="mailto:victor@example.com" class="contact-email">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
                 </svg>
                 tabunivictorr@gmail.com
             </a>
         </section>
     </div>
-
 </body>
 </html>
