@@ -149,68 +149,334 @@
                 <h1>Hello, I'm Victor</h1>
                 <div class="subtitle">Game developer & GUI enthusiast</div>
                 <div class="description">
-                    I’m , a Senior in Computer Information Systems at Western Michigan University, graduating in Spring 2026. 
-                    Skilled in Python, JavaScript, Java, HTML, CSS, and SQL, 
-                    I’m passionate about software development, data management, 
+                    I'm , a Senior in Computer Information Systems at Western Michigan University, graduating in Spring 2026.
+                    Skilled in Python, JavaScript, Java, HTML, CSS, and SQL,
+                    I'm passionate about software development, data management,
                     and creating innovative projects that blend technology, creativity, and meaningful user experiences.
                 </div>
             </div>
 
-            <div class="projects-grid" id="projects">
-                <div class="project-card">
-                    <div class="project-image recognition"><img src="assets/imgs/project01_placeholder.gif" alt=""></div>
-                    <div class="project-header">
-                        <h3>
-                            Gamer's Discussion Hub (Gameset)
-                            <span class="expand-icon">⚡</span>
-                        </h3>
-                        <a href="https://github.com/victor/recognition-tech" class="github-btn" target="_blank">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            Repository
-                        </a>
-                    </div>
-                    <p>Gameset is a game discovery platform I built to make exploring new titles simple and engaging. The site features endless scrolling with sections for most played, trending, and new games. I designed it with a clean navigation system (Home, Genre, About, Contact, and Search) so users can jump right into browsing without needing an account. Game data is pulled from an external API, ensuring that recommendations stay fresh and up to date.</p>
+            <div class="character-selection-grid" id="projects">
+                <div class="selection-header">
+                    <h2>Choose Your Project</h2>
+                    <div class="selection-subtitle">Click to explore my featured work</div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image storyscape"> <img src="assets/imgs/project-pacman.gif" alt=""></div>
-                    <div class="project-header">
-                        <h3>
-                            Pacman
-                            <span class="expand-icon">🚀</span>
-                        </h3>
-                        <a href="https://github.com/rfldn0/Pacman" class="github-btn" target="_blank">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            Repository
-                        </a>
+                <div class="character-cards-container">
+                    <div class="character-card" data-character="0">
+                        <div class="card-frame">
+                            <div class="card-avatar">
+                                <img src="assets/imgs/project01_placeholder.gif" alt="Gameset Project">
+                                <div class="avatar-overlay">
+                                    <div class="icon">⚡</div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="character-name">Gameset</h3>
+                                <div class="character-title">Game Discovery Platform</div>
+                                <div class="character-stats">
+                                    <span class="stat">JavaScript</span>
+                                    <span class="stat">API Integration</span>
+                                </div>
+                            </div>
+                            <div class="card-glow"></div>
+                            <div class="selection-indicator">
+                                <div class="indicator-dot"></div>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <p>Game discovery platform with endless scrolling, trending games, and clean navigation. Built with external API integration.</p>
+                            <a href="https://github.com/rfldn0/gamesetwebapp" class="view-project-btn" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Repository
+                            </a>
+                        </div>
                     </div>
-                    <p>PacMan is a simple clone of the classic arcade game, built in Java as a way to deepen my understanding of game loops, object‐oriented programming, and basic AI. Starting from a YouTube tutorial, I implemented core features like Pac-Man’s movement, ghost chase behavior, and one playable level. Future plans include adding selectable dots, power-ups, score tracking, multiple levels, sound effects, and smarter ghost strategies.</p>
+
+                    <div class="character-card" data-character="1">
+                        <div class="card-frame">
+                            <div class="card-avatar">
+                                <img src="assets/imgs/project-pacman.gif" alt="Pacman Project">
+                                <div class="avatar-overlay">
+                                    <div class="icon">🚀</div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="character-name">Pacman</h3>
+                                <div class="character-title">Classic Arcade Clone</div>
+                                <div class="character-stats">
+                                    <span class="stat">Java</span>
+                                    <span class="stat">Game Development</span>
+                                </div>
+                            </div>
+                            <div class="card-glow"></div>
+                            <div class="selection-indicator">
+                                <div class="indicator-dot"></div>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <p>Classic arcade game clone built in Java. Features Pac-Man movement, ghost AI, and game loop mechanics with future expansion plans.</p>
+                            <a href="https://github.com/rfldn0/Pacman" class="view-project-btn" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="character-card" data-character="2">
+                        <div class="card-frame">
+                            <div class="card-avatar">
+                                <img src="assets/imgs/project01_placeholder.gif" alt="Weather Dashboard">
+                                <div class="avatar-overlay">
+                                    <div class="icon">☁️</div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="character-name">Weather App</h3>
+                                <div class="character-title">Live Weather Dashboard</div>
+                                <div class="character-stats">
+                                    <span class="stat">JavaScript</span>
+                                    <span class="stat">API Integration</span>
+                                </div>
+                            </div>
+                            <div class="card-glow"></div>
+                            <div class="selection-indicator">
+                                <div class="indicator-dot"></div>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <p>Modern weather dashboard with real-time data, 5-day forecasts, interactive maps, and location-based alerts with data visualization.</p>
+                            <a href="#" class="view-project-btn" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="character-card" data-character="3">
+                        <div class="card-frame">
+                            <div class="card-avatar">
+                                <img src="assets/imgs/project-pacman.gif" alt="Task Manager">
+                                <div class="avatar-overlay">
+                                    <div class="icon">📋</div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="character-name">Task Manager</h3>
+                                <div class="character-title">Full-Stack Productivity App</div>
+                                <div class="character-stats">
+                                    <span class="stat">React</span>
+                                    <span class="stat">Node.js</span>
+                                </div>
+                            </div>
+                            <div class="card-glow"></div>
+                            <div class="selection-indicator">
+                                <div class="indicator-dot"></div>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <p>Full-stack task management app with drag-and-drop organization, team collaboration, real-time notifications, and analytics.</p>
+                            <a href="#" class="view-project-btn" target="_blank">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.30 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Repository
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Timeline Section -->
-    <section class="timeline-section" id="timeline">
+    <!-- RPG Timeline Section -->
+    <section class="rpg-timeline-section" id="timeline">
         <div class="container">
-            <h2>Journey & Accomplishments</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Cipher Studio </h3>
-                        <img src="assets/imgs/cipher_animation.gif" alt="Cipher">
-                        <div class="timeline-date">August 2025</div>
-                        <p>Cipher Studio is an indie game studio I founded to design wellness-focused adventures. Our current project, Haul, is an open-world mystery game in Unity, emphasizing exploration, narrative puzzles, and relaxing gameplay for a 2027 release.</p>
-                        <div class="link-btn">
-                        <a href="https://rfldn0.github.io/Cipher_Studio/"  target="_blank ">[Click Here]</a>
+            <div class="timeline-header">
+                <h2>Quest Log & Achievements</h2>
+                <div class="timeline-subtitle">Explore my journey through the realm of development</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                        <div class="progress-text">Journey Progress</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rpg-timeline">
+                <div class="timeline-path">
+                    <svg class="path-line" viewBox="0 0 1000 800" preserveAspectRatio="none">
+                        <path d="M50,400 Q250,200 450,350 T850,300" stroke="url(#pathGradient)" stroke-width="4" fill="none" stroke-dasharray="10,5"/>
+                        <defs>
+                            <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#4169E1;stop-opacity:0.3" />
+                                <stop offset="50%" style="stop-color:#89CFF0;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#4169E1;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div class="milestone" data-milestone="0" data-level="1">
+                    <div class="milestone-node">
+                        <div class="node-ring"></div>
+                        <div class="node-core">
+                            <div class="node-icon">🎓</div>
+                        </div>
+                        <div class="level-badge">LVL 1</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="card-header">
+                            <h3>Education Quest</h3>
+                            <div class="achievement-date">2022-2026</div>
+                        </div>
+                        <div class="card-content">
+                            <img src="assets/imgs/cipher_animation.gif" alt="Education" class="milestone-image">
+                            <p>Embarked on the Computer Information Systems journey at Western Michigan University. Gained proficiency in Python, JavaScript, Java, and database management.</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">SQL</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="xp-gained">+500 XP</div>
+                            <div class="achievement-type">📚 Academic</div>
                         </div>
                     </div>
                 </div>
-                
+
+                <div class="milestone" data-milestone="1" data-level="2">
+                    <div class="milestone-node">
+                        <div class="node-ring"></div>
+                        <div class="node-core">
+                            <div class="node-icon">🎮</div>
+                        </div>
+                        <div class="level-badge">LVL 2</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="card-header">
+                            <h3>First Game Development</h3>
+                            <div class="achievement-date">2023</div>
+                        </div>
+                        <div class="card-content">
+                            <img src="assets/imgs/project-pacman.gif" alt="Pacman Game" class="milestone-image">
+                            <p>Developed my first game - a Pacman clone in Java. Learned game loops, object-oriented programming, and basic AI behavior patterns.</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Game Logic</span>
+                                <span class="skill-tag">OOP</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="xp-gained">+750 XP</div>
+                            <div class="achievement-type">🎯 Development</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="milestone" data-milestone="2" data-level="3">
+                    <div class="milestone-node">
+                        <div class="node-ring"></div>
+                        <div class="node-core">
+                            <div class="node-icon">🌐</div>
+                        </div>
+                        <div class="level-badge">LVL 3</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="card-header">
+                            <h3>Web Development Mastery</h3>
+                            <div class="achievement-date">2024</div>
+                        </div>
+                        <div class="card-content">
+                            <img src="assets/imgs/project01_placeholder.gif" alt="Web Development" class="milestone-image">
+                            <p>Created Gameset - a game discovery platform with API integration, endless scrolling, and modern web technologies.</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">APIs</span>
+                                <span class="skill-tag">CSS</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="xp-gained">+1000 XP</div>
+                            <div class="achievement-type">🚀 Web Dev</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="milestone" data-milestone="3" data-level="4">
+                    <div class="milestone-node">
+                        <div class="node-ring"></div>
+                        <div class="node-core">
+                            <div class="node-icon">🏢</div>
+                        </div>
+                        <div class="level-badge">LVL 4</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="card-header">
+                            <h3>Cipher Studio Founded</h3>
+                            <div class="achievement-date">August 2025</div>
+                        </div>
+                        <div class="card-content">
+                            <img src="assets/imgs/cipher_animation.gif" alt="Cipher Studio" class="milestone-image">
+                            <p>Founded Cipher Studio, an indie game studio focused on wellness-centered adventures. Currently developing "Haul" - an open-world mystery game in Unity.</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Unity</span>
+                                <span class="skill-tag">Game Design</span>
+                                <span class="skill-tag">Leadership</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="xp-gained">+1500 XP</div>
+                            <div class="achievement-type">👑 Entrepreneur</div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://rfldn0.github.io/Cipher_Studio/" target="_blank" class="quest-button">
+                                <span class="button-icon">🔗</span>
+                                Visit Studio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="milestone future-milestone" data-milestone="4" data-level="5">
+                    <div class="milestone-node">
+                        <div class="node-ring"></div>
+                        <div class="node-core">
+                            <div class="node-icon">🎯</div>
+                        </div>
+                        <div class="level-badge">LVL 5</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="card-header">
+                            <h3>Game Release Quest</h3>
+                            <div class="achievement-date">2027</div>
+                        </div>
+                        <div class="card-content">
+                            <img src="assets/imgs/cipher_animation.gif" alt="Future Game" class="milestone-image">
+                            <p>Complete and release "Haul" - bringing wellness-focused gaming to players worldwide. The ultimate test of all acquired skills and experience.</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Publishing</span>
+                                <span class="skill-tag">Marketing</span>
+                                <span class="skill-tag">Community</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="xp-gained">+2500 XP</div>
+                            <div class="achievement-type">🏆 Epic Quest</div>
+                        </div>
+                        <div class="locked-overlay">
+                            <div class="lock-icon">🔒</div>
+                            <div class="lock-text">Quest In Progress</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

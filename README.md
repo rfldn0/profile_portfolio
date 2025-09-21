@@ -1,5 +1,36 @@
 
-# 🛠️ Tech Stack
+# Victor's Portfolio
+
+A modern, interactive portfolio website featuring game-inspired design elements and smooth animations. Built to showcase development projects and professional journey through an engaging user experience.
+
+## Features
+
+### Character Selection Project Showcase
+- Interactive project cards inspired by video game character selection screens
+- Hover effects with scaling, glowing, and smooth animations
+- Auto-cycling functionality with user interaction controls
+- Responsive grid layout that adapts to any screen size
+
+### RPG-Style Timeline
+- Game-inspired achievement system displaying career milestones
+- Interactive nodes with level badges and XP rewards
+- Smooth scroll-triggered animations and hover effects
+- Progress bar showing journey completion
+- Static display unless user interacts
+
+### Responsive Design
+- Mobile-first approach with hamburger navigation
+- Smooth hero section fade-out on scroll
+- Adaptive layouts for desktop, tablet, and mobile
+- Clean, minimal aesthetic with playful game elements
+
+### Interactive Elements
+- Theme toggle with spinning logo animation
+- Floating particle background effects
+- Smooth scrolling navigation
+- Dynamic visual feedback on all interactions
+
+## Tech Stack
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
 
@@ -10,9 +41,53 @@
 
 </div>
 
+## Project Structure
 
 ```
-GIFS credits:  
+portfolio/
+├── index.html              # Main HTML structure
+├── style.css               # All styling and animations
+├── script.js               # Interactive functionality
+├── animate.css             # Additional animation library
+├── TEMPLATE.md             # Character selection template documentation
+├── assets/
+│   └── imgs/
+│       ├── project01_placeholder.gif
+│       ├── project-pacman.gif
+│       ├── cipher_animation.gif
+│       └── upscaled_profile pict.jpg
+└── README.md               # This file
+```
+
+## Implementation Highlights
+
+### Character Selection Grid
+- CSS Grid with `auto-fit` and `minmax()` for responsive columns
+- JavaScript-powered auto-cycling with user interaction detection
+- Hover effects using CSS transforms and box-shadows
+- Ripple click animations with dynamic DOM manipulation
+
+### Timeline System
+- SVG curved path connecting milestones
+- Intersection Observer API for scroll-triggered animations
+- CSS custom properties for theme consistency
+- Progress bar with dynamic width updates
+
+### Performance Optimizations
+- GPU-accelerated animations using `transform3d`
+- Efficient event delegation for click handling
+- Optimized CSS selectors and minimal repaints
+- Responsive images with proper sizing
+
+## Browser Support
+- Chrome 60+
+- Firefox 55+
+- Safari 12+
+- Edge 79+
+
+## Assets Credits
+```
+GIF Sources:
 1. https://giphy.com/gifs/splat-nicksplat-rocket-power-3o6nUMU2VDwHbPoyQg
 2. https://giphy.com/gifs/RawFury-3s6inaVnOnO6L3vbwR
 3. https://giphy.com/gifs/pixel-pixels-art-gif-CjgNRG8CufDwA83jB6
@@ -20,23 +95,15 @@ GIFS credits:
 5. https://giphy.com/gifs/pixel-art-jeff-ZCZ7FHlu3sPek3h0zP
 6. https://giphy.com/gifs/80s-synthwave-aesthetic-5e25aUTZPcI94uMZgv
 7. https://giphy.com/gifs/80s-synthwave-aesthetic-k81NasbqkKA5HSyJxN
-
 ```
-## TO DO 
-TASK FOR PORTFOLIO: 
-1. ~~Search Home, Projects, Accomplishments, and contact svgs.~~ 
-2. ~~Find a way to make the z-index item disappear for screen width less 750px.~~ 
-3. ~~Hamburger menu.~~ 
-4. ~~Find out why the first project is not displaying any img placeholder.~~ 
-5. ~~Update navbar using svg.~~
-6. ~~navigation icon should become text when in hamburger menu.~~ 
-7. Project section needs to be expand horizontally and vertically as needed and not just expand vertically. 
-    CASE: flexbox. 
- 
 
-## Look
-### -version 1
-![alt text](image.png)
+## Development Notes
 
-### -version 2
-<img width="1899" height="877" alt="image" src="https://github.com/user-attachments/assets/186b09bd-02d7-46cf-b738-6ba0ddcc8b4f" />
+### Character Selection Template
+The character selection component has been documented in `TEMPLATE.md` for reuse in future projects. It includes complete HTML structure, CSS styling, and JavaScript functionality that can be easily adapted.
+
+### Theme System
+Uses CSS custom properties for consistent theming across light and dark modes. Theme persistence is handled through localStorage.
+
+### Animation Philosophy
+All animations follow a 60fps target using hardware-accelerated properties. Complex animations are optimized for mobile performance.
