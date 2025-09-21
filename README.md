@@ -1,5 +1,5 @@
 
-# Victor's Portfolio
+# Portfolio docs
 
 A modern, interactive portfolio website featuring game-inspired design elements and smooth animations. Built to showcase development projects and professional journey through an engaging user experience.
 
