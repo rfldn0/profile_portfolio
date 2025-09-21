@@ -1,20 +1,29 @@
 
+/* ===== CSS CUSTOM PROPERTIES ===== */
+/* Dark theme color scheme - provides cohesive branding across portfolio */
 :root {
-    /* Dark theme (default) */
+    /* Primary backgrounds with gradient depth */
     --bg-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
     --bg-secondary: rgba(255, 255, 255, 0.05);
     --bg-card: rgba(255, 255, 255, 0.08);
     --bg-card-hover: rgba(255, 255, 255, 0.12);
+
+    /* Text hierarchy for optimal readability */
     --text-primary: #ffffff;
     --text-secondary: #cccccc;
     --text-muted: #888888;
+
+    /* Interactive element borders */
     --border-color: rgba(255, 255, 255, 0.15);
     --border-color-hover: rgba(255, 255, 255, 0.25);
+
+    /* Visual effect colors */
     --particle-color: rgba(255, 255, 255, 0.3);
     --timeline-line: rgba(255, 255, 255, 0.2);
     --background: #0a0a0a;
 }
 
+/* Light theme color overrides - maintains visual hierarchy in bright environments */
 [data-theme="light"] {
     --bg-primary: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     --bg-secondary: rgba(0, 0, 0, 0.05);
@@ -30,32 +39,39 @@
     --background: #f8fafc;
 }
 
+/* ===== GLOBAL RESET & BASE STYLES ===== */
+/* Ensures consistent rendering across browsers */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Smooth scrolling for navigation links */
 html {
     scroll-behavior: smooth;
 }
 
+/* Main body styling with theme support */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease; /* Slowed down for smoother transitions */
 }
 
+/* ===== LAYOUT CONTAINER ===== */
+/* Responsive container for content alignment */
 .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Theme Toggle with New Logo - Clean Design */
+/* ===== THEME TOGGLE & BRANDING ===== */
+/* Fixed position theme switcher with studio branding */
 .theme-toggle {
     position: fixed;
     top: 30px;
@@ -82,12 +98,12 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Logo spinning animation for theme switching feedback */
 .new-logo-svg.spinning {
-    animation: spin 0.6s ease-in-out;
+    animation: spin 1.2s ease-in-out; /* Slowed down for better visual feedback */
 }
 
-
-
+/* Studio name styling */
 .studio-name {
     font-size: 1.2rem;
     font-weight: 700;
@@ -101,7 +117,8 @@ body {
     color: var(--text-secondary);
 }
 
-/* Header Section */
+/* ===== HERO SECTION ===== */
+/* Split-screen layout showcasing profile and projects */
 .hero-section {
     min-height: 100vh;
     display: grid;
@@ -163,9 +180,10 @@ body {
     max-width: 500px;
 }
 
-/* Character Selection Grid */
+/* ===== PROJECT SELECTION SYSTEM ===== */
+/* Game-inspired project showcase with card interactions */
 .character-selection-grid {
-    animation: fadeInRight 1s ease-out 0.3s both;
+    animation: fadeInRight 1.5s ease-out 0.3s both; /* Slowed down for smoother entrance */
     padding: 40px 0;
 }
 
@@ -198,13 +216,15 @@ body {
     margin: 0 auto;
 }
 
+/* Individual project cards with hover effects */
 .character-card {
     position: relative;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Significantly slowed down */
     transform-style: preserve-3d;
 }
 
+/* Card frame with enhanced transition timing */
 .card-frame {
     background: var(--bg-card);
     border: 2px solid var(--border-color);
@@ -212,10 +232,11 @@ body {
     padding: 25px;
     position: relative;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Slowed down for smoother interactions */
     transform: translateZ(0);
 }
 
+/* Shimmer effect overlay for card interactions */
 .card-frame::before {
     content: '';
     position: absolute;
@@ -225,7 +246,7 @@ body {
     bottom: 0;
     background: linear-gradient(45deg, transparent 30%, rgba(65, 105, 225, 0.1) 50%, transparent 70%);
     opacity: 0;
-    transition: all 0.6s ease;
+    transition: all 1.2s ease; /* Slowed down shimmer effect */
     transform: translateX(-100%);
 }
 
@@ -244,11 +265,12 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
+/* Project preview images with smooth scaling */
 .card-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.4s ease;
+    transition: all 0.8s ease; /* Slowed down image transitions */
 }
 
 .avatar-overlay {
@@ -342,10 +364,11 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Expandable card details with smooth reveal animation */
 .card-details {
     max-height: 0;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: all 0.8s ease; /* Slowed down for smoother reveal */
     padding: 0 25px;
     opacity: 0;
 }
@@ -379,7 +402,8 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hover Effects */
+/* ===== CARD HOVER & INTERACTION EFFECTS ===== */
+/* Smooth hover animations for enhanced user experience */
 .character-card:hover {
     transform: translateY(-10px) scale(1.02);
 }
@@ -403,6 +427,7 @@ body {
     color: white;
 }
 
+/* Smooth card detail expansion on hover */
 .character-card:hover .card-details {
     max-height: 200px;
     padding: 25px;
@@ -440,13 +465,15 @@ body {
     background: white;
 }
 
-/* Animations */
+/* ===== KEYFRAME ANIMATIONS ===== */
+/* Smooth gradient animations for visual appeal */
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
+/* Subtle pulsing glow effect */
 @keyframes pulseGlow {
     0%, 100% { opacity: 0.7; }
     50% { opacity: 1; }
@@ -589,7 +616,8 @@ body {
     transform: scale(1.2) rotate(45deg);
 }
 
-/* Navigation - Sharp with SVG Icons */
+/* ===== NAVIGATION SYSTEM ===== */
+/* Fixed navigation with icon-based design */
 .nav {
     position: fixed;
     top: 30px;
@@ -627,7 +655,8 @@ body {
     stroke-width: 0;
 }
 
-/* Mobile Hamburger Menu */
+/* ===== MOBILE NAVIGATION ===== */
+/* Responsive hamburger menu for mobile devices */
 .hamburger-menu {
     position: fixed;
     top: 30px;
@@ -643,7 +672,7 @@ body {
     border-radius: 6px;
     cursor: pointer;
     padding: 12px;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease; /* Slowed down for smoother mobile interactions */
 }
 
 .hamburger-menu:hover {
@@ -803,7 +832,8 @@ body {
     visibility: visible;
 }
 
-/* Social Media Bar - Hidden below 750px */
+/* ===== SOCIAL MEDIA BAR ===== */
+/* Vertical social media links (hidden on mobile) */
 .social-bar {
     position: fixed;
     left: 30px;
@@ -859,7 +889,8 @@ body {
     color: white;
 }
 
-/* RPG Timeline Section */
+/* ===== RPG-STYLED TIMELINE ===== */
+/* Career progression displayed as game-like achievements */
 .rpg-timeline-section {
     padding: 80px 0;
     background: var(--bg-secondary);
@@ -1044,6 +1075,7 @@ body {
     box-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);
 }
 
+/* Timeline milestone cards with enhanced interactions */
 .milestone-card {
     flex: 1;
     background: var(--bg-card);
@@ -1052,7 +1084,7 @@ body {
     padding: 25px;
     margin: 0 20px;
     position: relative;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Slowed down timeline interactions */
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -1084,6 +1116,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Timeline milestone images with smooth hover effects */
 .milestone-image {
     width: 100%;
     height: 200px;
@@ -1091,7 +1124,7 @@ body {
     border-radius: 10px;
     margin-bottom: 15px;
     border: 2px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: all 0.6s ease; /* Slowed down image transitions */
 }
 
 .card-content p {
@@ -1437,7 +1470,8 @@ body {
     }
 }
 
-/* Contact Section */
+/* ===== CONTACT SECTION ===== */
+/* Professional contact information and call-to-action */
 .contact-section {
     padding: 80px 0;
     text-align: center;
@@ -1654,7 +1688,8 @@ body {
 
 
 
-/* Floating particles background */
+/* ===== BACKGROUND EFFECTS ===== */
+/* Animated particle system for visual depth */
 .particles {
     position: fixed;
     top: 0;

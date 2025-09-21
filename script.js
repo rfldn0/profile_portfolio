@@ -1,64 +1,91 @@
+/* ===== PORTFOLIO INTERACTIVE FUNCTIONALITY ===== */
+/* Victor Tabuni's Portfolio - Enhanced with smooth animations and interactions */
 
-// Mobile menu functionality
+/* ===== MOBILE NAVIGATION SYSTEM ===== */
+/**
+ * Toggles the mobile hamburger menu visibility
+ * Manages overlay and menu animation states
+ */
 function toggleMobileMenu() {
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileMenu = document.querySelector('.mobile-menu');
     const overlay = document.querySelector('.mobile-overlay');
-    
+
     hamburger.classList.toggle('active');
     mobileMenu.classList.toggle('active');
     overlay.classList.toggle('active');
 }
 
+/**
+ * Closes the mobile menu and resets all related elements
+ * Used when clicking outside menu or on menu items
+ */
 function closeMobileMenu() {
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileMenu = document.querySelector('.mobile-menu');
     const overlay = document.querySelector('.mobile-overlay');
-    
+
     hamburger.classList.remove('active');
     mobileMenu.classList.remove('active');
     overlay.classList.remove('active');
 }
 
-// Theme toggle functionality
+/* ===== THEME MANAGEMENT SYSTEM ===== */
+/**
+ * Toggles between light and dark themes with smooth visual feedback
+ * Includes logo spinning animation and persistent storage
+ */
 function toggleTheme() {
     const body = document.body;
     const logoSvg = document.querySelector('.new-logo-svg');
     const currentTheme = body.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    // Add spinning animation
+
+    // Enhanced spinning animation with longer duration for better visual feedback
     logoSvg.classList.add('spinning');
     setTimeout(() => {
         logoSvg.classList.remove('spinning');
-    }, 600);
-    
+    }, 1200); // Increased from 600ms for smoother animation
+
+    // Apply theme and save preference
     body.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
 }
 
-// Load saved theme or default to dark
+/**
+ * Loads user's saved theme preference or defaults to dark theme
+ * Called on page initialization
+ */
 function loadTheme() {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.body.setAttribute('data-theme', savedTheme);
 }
 
-// Create floating particles
+/* ===== VISUAL EFFECTS SYSTEM ===== */
+/**
+ * Creates animated floating particles for background ambiance
+ * Generates 50 particles with randomized timing for organic movement
+ */
 function createParticles() {
     const particleContainer = document.querySelector('.particles');
     const particleCount = 50;
 
+    // Generate particles with staggered animations for natural effect
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.left = Math.random() * 100 + '%';
         particle.style.animationDelay = Math.random() * 20 + 's';
-        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        particle.style.animationDuration = (20 + Math.random() * 15) + 's'; // Slowed down from 15-25s to 20-35s
         particleContainer.appendChild(particle);
     }
 }
 
-// Smooth scrolling for navigation
+/* ===== NAVIGATION INTERACTIONS ===== */
+/**
+ * Implements smooth scrolling for all navigation links
+ * Works for both desktop nav items and mobile menu items
+ */
 document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
@@ -72,42 +99,56 @@ document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(item => {
     });
 });
 
-// Project card interactions
+/**
+ * Adds interactive click feedback to project cards
+ * Prevents interference with GitHub button clicks
+ */
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', (e) => {
-        // Don't trigger card click if GitHub button was clicked
+        // Prevent card animation if GitHub button was clicked
         if (e.target.closest('.github-btn')) return;
-        
-        // Add a subtle click animation
+
+        // Enhanced click feedback with slower animation
         card.style.transform = 'scale(0.98)';
         setTimeout(() => {
             card.style.transform = '';
-        }, 150);
+        }, 300); // Increased from 150ms for more noticeable feedback
     });
 });
 
-// Initialize everything
+/* ===== INITIALIZATION SEQUENCE ===== */
+/**
+ * Initialize all portfolio features and effects
+ * Load theme and create visual elements immediately
+ */
 loadTheme();
 createParticles();
 
-// Initialize character selection after DOM is loaded
+/**
+ * Initialize interactive features after DOM content is fully loaded
+ * Staggered timing ensures smooth animation sequences
+ */
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(initCharacterSelection, 1000); // Wait for animations to complete
-    setTimeout(initRPGTimeline, 1500); // Initialize RPG timeline
+    setTimeout(initCharacterSelection, 1500); // Increased delay for smoother entrance
+    setTimeout(initRPGTimeline, 2000); // Enhanced timing for timeline initialization
 });
 
-// Enhanced scroll effects for hero fade and parallax
+/* ===== SCROLL-BASED VISUAL EFFECTS ===== */
+/**
+ * Creates immersive scroll animations for hero section and timeline
+ * Implements parallax effects and smooth transitions between sections
+ */
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const windowHeight = window.innerHeight;
     const heroSection = document.querySelector('.hero-section');
     const timelineSection = document.querySelector('.rpg-timeline-section');
 
-    // Hero fade-out effect
+    // Hero section parallax and fade effect
     if (heroSection) {
         const heroRect = heroSection.getBoundingClientRect();
-        const fadeStartPoint = windowHeight * 0.3; // Start fading when 30% down
-        const fadeEndPoint = windowHeight * 0.8; // Fully faded when 80% down
+        const fadeStartPoint = windowHeight * 0.3; // Begin fade at 30% scroll
+        const fadeEndPoint = windowHeight * 0.8; // Complete fade at 80% scroll
 
         let opacity = 1;
         if (scrolled > fadeStartPoint) {
@@ -115,16 +156,17 @@ window.addEventListener('scroll', () => {
             opacity = Math.max(0, 1 - fadeProgress);
         }
 
+        // Apply smooth opacity and parallax movement
         heroSection.style.opacity = opacity;
         heroSection.style.transform = `translateY(${scrolled * 0.2}px)`;
     }
 
-    // Timeline entrance effect
+    // Timeline section layering for smooth transitions
     if (timelineSection) {
         const timelineRect = timelineSection.getBoundingClientRect();
         const timelineTop = timelineRect.top;
 
-        // Ensure timeline doesn't overlap hero content
+        // Manage z-index for proper section layering
         if (timelineTop < windowHeight * 0.9) {
             timelineSection.style.zIndex = '10';
         } else {
@@ -152,7 +194,11 @@ document.querySelectorAll('.timeline-item').forEach(item => {
     observer.observe(item);
 });
 
-// Character Selection Functionality
+/* ===== PROJECT CARD SELECTION SYSTEM ===== */
+/**
+ * Interactive project showcase with automatic rotation and user controls
+ * Manages card selection states and smooth transitions
+ */
 let currentCharacterIndex = 0;
 let isUserInteracting = false;
 let autoRotateTimer;
@@ -176,17 +222,25 @@ function nextCharacter() {
     }
 }
 
+/**
+ * Starts automatic card rotation for passive browsing
+ * Slower timing for better user experience
+ */
 function startAutoRotate() {
-    autoRotateTimer = setInterval(nextCharacter, 3000); // 3 seconds per card
+    autoRotateTimer = setInterval(nextCharacter, 5000); // Increased from 3s to 5s for better viewing
 }
 
 function stopAutoRotate() {
     clearInterval(autoRotateTimer);
 }
 
+/**
+ * Resets automatic rotation after user interaction
+ * Provides breathing room before resuming auto-rotation
+ */
 function resetAutoRotate() {
     stopAutoRotate();
-    setTimeout(startAutoRotate, 2000); // Resume after 2 seconds of no interaction
+    setTimeout(startAutoRotate, 3000); // Increased from 2s to 3s for less aggressive auto-rotation
 }
 
 // Add click handlers to character cards
@@ -218,17 +272,20 @@ function initCharacterSelection() {
     }
 }
 
-// Add enhanced visual feedback
+/**
+ * Enhanced visual feedback system for project cards
+ * Creates ripple effect on click for better user interaction
+ */
 characterCards.forEach(card => {
     card.addEventListener('click', () => {
-        // Create click ripple effect
+        // Create smooth ripple effect with enhanced styling
         const ripple = document.createElement('div');
         ripple.style.cssText = `
             position: absolute;
             border-radius: 50%;
             background: rgba(65, 105, 225, 0.6);
             transform: scale(0);
-            animation: ripple 0.6s linear;
+            animation: ripple 1.2s ease-out; /* Slowed down from 0.6s */
             pointer-events: none;
             z-index: 1000;
         `;
@@ -242,9 +299,10 @@ characterCards.forEach(card => {
         card.style.position = 'relative';
         card.appendChild(ripple);
 
+        // Remove ripple after enhanced duration
         setTimeout(() => {
             ripple.remove();
-        }, 600);
+        }, 1200); // Increased from 600ms to match animation duration
     });
 });
 
@@ -260,7 +318,11 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// RPG Timeline Functionality
+/* ===== RPG TIMELINE INTERACTION SYSTEM ===== */
+/**
+ * Manages the interactive career timeline with game-like progression
+ * Handles milestone highlighting, progress tracking, and visual feedback
+ */
 let timelineAnimationActive = false;
 let currentMilestoneIndex = 0;
 let progressAnimationTimer;
@@ -328,23 +390,28 @@ function highlightMilestone(index) {
     }
 }
 
+/**
+ * Updates the progress bar to reflect current milestone position
+ * Smooth animation provides visual feedback for timeline progression
+ */
 function updateProgressBar(milestoneIndex) {
     const progressFill = document.querySelector('.progress-fill');
     const totalMilestones = document.querySelectorAll('.milestone').length;
     const progressPercentage = ((milestoneIndex + 1) / totalMilestones) * 100;
 
     if (progressFill) {
-        progressFill.style.transition = 'width 1s ease-out';
+        progressFill.style.transition = 'width 1.5s ease-out'; // Slowed down from 1s
         progressFill.style.width = `${progressPercentage}%`;
     }
 }
 
-// Simplified visual feedback - removed complex particle effects and animations
-
-// Simplified timeline interaction - no auto-progression
+/**
+ * Global click handler for timeline milestone interactions
+ * Provides immediate feedback without complex auto-progression
+ */
 document.addEventListener('click', (e) => {
     if (e.target.closest('.milestone')) {
-        // Just handle the click, no auto-progression to stop/resume
+        // Handle milestone click with enhanced visual feedback
         const milestone = e.target.closest('.milestone');
         const milestones = Array.from(document.querySelectorAll('.milestone'));
         const index = milestones.indexOf(milestone);
@@ -356,24 +423,27 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Add simplified CSS animations
+/**
+ * Dynamic CSS animations for enhanced timeline interactions
+ * Provides smooth entrance and highlighting effects
+ */
 const timelineStyle = document.createElement('style');
 timelineStyle.textContent = `
     .milestone-visible {
-        animation: milestoneSlideIn 0.6s ease-out forwards;
+        animation: milestoneSlideIn 1.2s ease-out forwards; /* Slowed down from 0.6s */
     }
 
     .milestone-active .node-ring {
         border-color: #89CFF0 !important;
         box-shadow: 0 0 20px rgba(137, 207, 240, 0.8) !important;
-        transition: all 0.3s ease;
+        transition: all 0.6s ease; /* Slowed down from 0.3s */
     }
 
     .milestone-active .milestone-card {
         border-color: #4169E1 !important;
         box-shadow: 0 10px 25px rgba(65, 105, 225, 0.25) !important;
         transform: translateY(-5px) !important;
-        transition: all 0.3s ease;
+        transition: all 0.6s ease; /* Slowed down from 0.3s */
     }
 
     @keyframes milestoneSlideIn {
