@@ -30,6 +30,8 @@ TASK FOR PORTFOLIO:
 4. ~~Find out why the first project is not displaying any img placeholder.~~ 
 5. ~~Update navbar using svg.~~
 6. ~~navigation icon should become text when in hamburger menu.~~ 
+7. Project section needs to be expand horizontally and vertically as needed and not just expand vertically. 
+    CASE: flexbox. 
  
 
 ## Look
