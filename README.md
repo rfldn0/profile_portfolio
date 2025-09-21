@@ -33,4 +33,8 @@ TASK FOR PORTFOLIO:
  
 
 ## Look
+### -version 1
 ![alt text](image.png)
+
+### -version 2
+<img width="1899" height="877" alt="image" src="https://github.com/user-attachments/assets/186b09bd-02d7-46cf-b738-6ba0ddcc8b4f" />
