@@ -1559,6 +1559,114 @@ body {
     .hamburger-menu {
         display: flex;
     }
+
+    /* COMPLETE ANIMATION OVERRIDE WITH MAXIMUM SPECIFICITY */
+
+    /* Force immediate visibility - override 'both' animation fill-mode */
+    .hero-content,
+    .hero-section .hero-content,
+    body .hero-section .hero-content {
+        animation: none !important;
+        animation-fill-mode: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .character-selection-grid,
+    .hero-section .character-selection-grid,
+    body .hero-section .character-selection-grid,
+    #projects.character-selection-grid {
+        animation: none !important;
+        animation-name: none !important;
+        animation-duration: 0s !important;
+        animation-delay: 0s !important;
+        animation-fill-mode: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    /* Ensure all card components are immediately visible */
+    .character-card,
+    .character-cards-container .character-card,
+    .card-frame,
+    .character-card .card-frame,
+    .card-details,
+    .character-card .card-details {
+        animation: none !important;
+        animation-fill-mode: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        transition: none !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding: 25px !important;
+    }
+
+    /* Override any dynamically applied animations */
+    .character-card[style*="opacity"],
+    .character-selection-grid[style*="opacity"],
+    .hero-content[style*="opacity"] {
+        opacity: 1 !important;
+    }
+
+    /* Override dynamic CSS animations added by JavaScript */
+    .milestone-visible,
+    .milestone-active,
+    .timeline-item,
+    .rpg-timeline .milestone {
+        animation: none !important;
+        animation-name: none !important;
+        animation-delay: 0s !important;
+        animation-duration: 0s !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    /* Override any keyframe animations on mobile */
+    @keyframes milestoneSlideIn {
+        0%, 100% {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    }
+
+    @keyframes fadeInLeft {
+        0%, 100% {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    }
+
+    @keyframes fadeInRight {
+        0%, 100% {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    }
+
+    @keyframes fadeInUp {
+        0%, 100% {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    }
+
+    /* Reduce spacing between projects and timeline sections on mobile */
+    .character-selection-grid {
+        padding: 20px 0 10px 0 !important;
+    }
+
+    .rpg-timeline-section {
+        margin-top: 0 !important;
+        padding: 40px 0 !important;
+    }
 }
 
 @media (max-width: 768px) {

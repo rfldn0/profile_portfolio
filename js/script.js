@@ -116,6 +116,65 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
+/* ===== MOBILE DETECTION ===== */
+/**
+ * Detects if user is on mobile device to disable animations
+ */
+function isMobileDevice() {
+    return window.innerWidth <= 750 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+/**
+ * Forces immediate visibility of all elements on mobile devices
+ * Overrides any CSS or JavaScript that might cause elements to be hidden
+ */
+function forceImmediateVisibilityOnMobile() {
+    if (!isMobileDevice()) return;
+
+    // Force immediate visibility of hero content and character selection
+    const heroContent = document.querySelector('.hero-content');
+    const characterGrid = document.querySelector('.character-selection-grid');
+    const cardDetails = document.querySelectorAll('.card-details');
+    const characterCards = document.querySelectorAll('.character-card');
+
+    // Override any styles that might cause invisibility
+    [heroContent, characterGrid].forEach(element => {
+        if (element) {
+            element.style.cssText += `
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: none !important;
+                animation: none !important;
+                transition: none !important;
+            `;
+        }
+    });
+
+    // Make all card details immediately visible
+    cardDetails.forEach(detail => {
+        detail.style.cssText += `
+            max-height: none !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            padding: 25px !important;
+            overflow: visible !important;
+            transition: none !important;
+            animation: none !important;
+        `;
+    });
+
+    // Ensure all character cards are visible
+    characterCards.forEach(card => {
+        card.style.cssText += `
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: none !important;
+            animation: none !important;
+            transition: none !important;
+        `;
+    });
+}
+
 /* ===== INITIALIZATION SEQUENCE ===== */
 /**
  * Initialize all portfolio features and effects
@@ -126,11 +185,20 @@ createParticles();
 
 /**
  * Initialize interactive features after DOM content is fully loaded
- * Staggered timing ensures smooth animation sequences
+ * Immediate initialization on mobile for instant visibility
  */
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(initCharacterSelection, 1500); // Increased delay for smoother entrance
-    setTimeout(initRPGTimeline, 2000); // Enhanced timing for timeline initialization
+    if (isMobileDevice()) {
+        // Immediate initialization on mobile - no delays
+        initCharacterSelection();
+        initRPGTimeline();
+        // Force immediate visibility of all elements on mobile
+        forceImmediateVisibilityOnMobile();
+    } else {
+        // Staggered timing for desktop smooth animation sequences
+        setTimeout(initCharacterSelection, 1500);
+        setTimeout(initRPGTimeline, 2000);
+    }
 });
 
 /* ===== SCROLL-BASED VISUAL EFFECTS ===== */
@@ -144,7 +212,12 @@ window.addEventListener('scroll', () => {
     const heroSection = document.querySelector('.hero-section');
     const timelineSection = document.querySelector('.rpg-timeline-section');
 
-    // Hero section parallax and fade effect
+    // Skip all scroll animations on mobile devices for immediate visibility
+    if (isMobileDevice()) {
+        return;
+    }
+
+    // Hero section parallax and fade effect (desktop only)
     if (heroSection) {
         const heroRect = heroSection.getBoundingClientRect();
         const fadeStartPoint = windowHeight * 0.3; // Begin fade at 30% scroll
