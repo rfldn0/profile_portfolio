@@ -29,11 +29,13 @@ A comprehensive template and style guide for creating modern, interactive portfo
 ### Key Features
 - ✨ Interactive project showcase with auto-cycling
 - 🎨 RPG-style timeline with achievement progression
-- 🌙 Seamless dark/light theme switching
+- 🌙 Seamless dark/light theme switching with enhanced mobile support
 - 📱 Mobile-first responsive design with instant loading
 - ⚡ Hardware-accelerated animations (desktop) / Instant visibility (mobile)
 - 🎯 Accessible navigation and interactions
 - 🚀 Zero fade animations on mobile for immediate content display
+- 🍔 Enhanced mobile menu with integrated branding and backdrop blur
+- 🎭 Theme-adaptive mobile interface with optimized contrast
 
 ---
 
@@ -111,6 +113,20 @@ project_name/
     <!-- Mobile Navigation -->
     <div class="hamburger-menu" onclick="toggleMobileMenu()">
         <!-- Hamburger icon -->
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <!-- Studio Branding in Mobile Menu -->
+        <div class="mobile-studio-section">
+            <div class="mobile-studio-container">
+                <!-- Studio logo and name -->
+            </div>
+        </div>
+        <!-- Social links and navigation -->
     </div>
 
     <!-- Main Content -->
@@ -283,8 +299,8 @@ project_name/
 [data-theme="light"] {
     --bg-primary: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     --bg-secondary: rgba(0, 0, 0, 0.05);
-    --bg-card: rgba(0, 0, 0, 0.08);
-    --bg-card-hover: rgba(0, 0, 0, 0.12);
+    --bg-card: rgba(255, 255, 255, 0.95);
+    --bg-card-hover: rgba(255, 255, 255, 0.98);
     --text-primary: #1a202c;
     --text-secondary: #2d3748;
     --text-muted: #718096;
@@ -795,6 +811,62 @@ document.addEventListener('DOMContentLoaded', () => {
         animation: none;
     }
 }
+```
+
+---
+
+## 🍔 Enhanced Mobile Menu Pattern
+
+### Mobile Menu with Integrated Branding
+```css
+/* Mobile menu with backdrop blur and integrated branding */
+.mobile-menu {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: var(--bg-card);
+}
+
+.mobile-studio-section {
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.mobile-studio-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Hide external branding on mobile */
+@media (max-width: 750px) {
+    .studio-name {
+        display: none;
+    }
+}
+
+/* Theme-adaptive overlay */
+[data-theme="light"] .mobile-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+```
+
+### HTML Structure for Enhanced Mobile Menu
+```html
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+    <!-- Studio Branding in Mobile Menu -->
+    <div class="mobile-studio-section">
+        <div class="mobile-studio-container">
+            <svg class="mobile-studio-logo">
+                <!-- Logo SVG -->
+            </svg>
+            <span class="mobile-studio-name">Studio Name</span>
+        </div>
+    </div>
+    <!-- Rest of mobile menu content -->
+</div>
 ```
 
 ---

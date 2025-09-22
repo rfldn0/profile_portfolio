@@ -27,8 +27,8 @@
 [data-theme="light"] {
     --bg-primary: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     --bg-secondary: rgba(0, 0, 0, 0.05);
-    --bg-card: rgba(0, 0, 0, 0.08);
-    --bg-card-hover: rgba(0, 0, 0, 0.12);
+    --bg-card: rgba(255, 255, 255, 0.95);
+    --bg-card-hover: rgba(255, 255, 255, 0.98);
     --text-primary: #1a202c;
     --text-secondary: #2d3748;
     --text-muted: #718096;
@@ -713,6 +713,8 @@ body {
     display: flex;
     flex-direction: column;
     padding: 80px 30px 30px 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .mobile-menu.active {
@@ -827,9 +829,42 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Enhanced overlay for light theme */
+[data-theme="light"] .mobile-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
 .mobile-overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+/* Mobile Studio Section */
+.mobile-studio-section {
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.mobile-studio-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.mobile-studio-logo {
+    width: 40px;
+    height: 40px;
+    fill: var(--text-primary);
+}
+
+.mobile-studio-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 /* ===== SOCIAL MEDIA BAR ===== */
@@ -1560,6 +1595,11 @@ body {
         display: flex;
     }
 
+    /* Hide studio name outside menu on mobile */
+    .studio-name {
+        display: none;
+    }
+
     /* COMPLETE ANIMATION OVERRIDE WITH MAXIMUM SPECIFICITY */
 
     /* Force immediate visibility - override 'both' animation fill-mode */
@@ -1786,7 +1826,7 @@ body {
 
     .mobile-menu {
         width: 280px;
-        padding: 70px 20px 20px 20px;
+        padding: 60px 20px 20px 20px;
     }
 
     .timeline-item {

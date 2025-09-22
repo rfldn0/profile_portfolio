@@ -27,7 +27,10 @@ A modern, interactive portfolio website featuring game-inspired design elements 
 
 ### Enhanced Responsiveness
 - Mobile-first approach with intuitive hamburger navigation
-- Smooth hero section parallax effects on scroll
+- Studio branding intelligently repositioned within mobile menu
+- Enhanced light theme support with improved contrast and visibility
+- Backdrop blur effects for professional mobile menu presentation
+- Smooth hero section parallax effects on scroll (desktop only)
 - Adaptive layouts for desktop, tablet, and mobile devices
 - Social media integration with platform-specific hover effects
 
@@ -164,7 +167,11 @@ Extend the timeline by adding new milestone sections in the RPG timeline area.
 - **Instant Loading**: No fade animations on mobile - all content appears immediately
 - **Zero Visibility Issues**: All projects and sections visible without delays
 - **Responsive Grid**: Automatic layout adjustments for all screen sizes
-- **Mobile Navigation**: Intuitive hamburger menu with smooth animations
+- **Enhanced Mobile Navigation**:
+  - Intuitive hamburger menu with improved light mode visibility
+  - Studio branding integrated within mobile menu
+  - Backdrop blur effects for better content separation
+- **Theme Adaptive**: Optimized overlay and menu contrast for both dark and light themes
 - **Performance**: Optimized for mobile performance and battery life
 - **Immediate Visibility**: Disabled JavaScript animation delays for instant content display
 
